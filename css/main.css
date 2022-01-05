@@ -1,0 +1,62 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    'header'
+    'content'
+    'footer';
+    gap: 10px;
+}
+.grid-container > header {
+   grid-area: header;
+}
+.grid-container > content {
+   grid-area: content;
+   overflow: auto;
+}
+
+.grid-container > footer {
+   grid-area: footer;
+}
+
+.grid-container-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+.container {
+    margin-top: 10px;
+    border: 1px solid black;
+    line-height: 50px;
+    border-radius: 6px;
+    text-align: center;
+}
+.content{
+    
+}
+.header {
+  background-color: red;
+}
+}
+.hero {
+ 
+}
+.service {
+
+}
+.services {
+    
+}
+.freelance {
+ 
+}
+.testimonials {
+ 
+}
+.footer {
+ 
+}
+.nav{ 
+  background-color: red;
+}
