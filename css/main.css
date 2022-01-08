@@ -4,10 +4,11 @@ body * {
     padding: 0;
     vertical-align: top;
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
 }
-.grid-container {
+main {
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
         'header'
@@ -17,7 +18,8 @@ body * {
         'testimonials'
         'content'
         'footer';
-    gap: 10px;
+    gap: 30px;
+    margin-top: 20px;
 }
 .grid-container-column {
     display: grid;
@@ -26,18 +28,13 @@ body * {
     background-color: yellow;
 }
 .container {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
     border: 1px solid black;
     line-height: 50px;
     border-radius: 6px;
     text-align: center;
 }
-.content {
-}
 .header {
+    position: sticky;
     background-color: red;
 }
 .hero {
