@@ -9,15 +9,15 @@ _9-grid-homework_
 
 This project is for educational porpuses only. Pull request are welcome, but priority for project authors! Thank you for your cooperation!
 
-Site published at: https://github.io/linajja/9-grid-homework
+Site published at: https://linajja.github.io/9-grid-homework/
 
 Design: [Grid-homework](https://discord.com/channels/571393319201144843/912397085523988480)
 
 ## Project features
 
-- Github pages 
-- CSS
-- Image
+-   Github pages
+-   CSS
+-   Image
 
 ## Authors
 
