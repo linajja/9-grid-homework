@@ -13,6 +13,7 @@ main {
     grid-template-areas:
         'header'
         'hero'
+        'ads'
         'service'
         'freelance'
         'testimonials'
@@ -36,6 +37,7 @@ main {
     grid-template-columns: 1fr;
     gap: 10px;
     background-color: yellow;
+    align-content: center;
 }
 .header {
     position: fixed;
@@ -46,6 +48,11 @@ main {
 .hero {
     grid-area: hero;
     background-color: green;
+}
+.ads {
+    grid-area: ads;
+    background-color: brown;
+    display: none;
 }
 .service {
     grid-area: service;
@@ -70,26 +77,6 @@ main {
     background-color: red;
 }
 @media (min-width: 768px) {
-    .grid-container-column {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        gap: 10px;
-    }
-
-    .grid-container {
-        grid-template-areas:
-            'header'
-            'hero'
-            'service'
-            'testimonials'
-            'freelance'
-            'footer';
-    }
-
-    .navig {
-    }
-}
-@media (min-width: 962px) {
     main {
         display: grid;
         grid-template-rows: 1fr;
@@ -97,12 +84,51 @@ main {
         grid-template-areas:
             'header'
             'hero'
+            'ads'
             'service'
             'testimonials'
             'freelance'
-            'footer';
+            'footer'
+            'navig';
     }
-
+    .grid-container-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .service > .grid-container-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .navig {
+        display: none;
+    }
+}
+@media (min-width: 920px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        grid-template-areas:
+            'header header header header'
+            'hero hero hero hero'
+            'testimonials testimonials testimonials ads'
+            'testimonials testimonials testimonials ads'
+            'service service service ads'
+            'service service service ads'
+            'freelance freelance freelance ads'
+            'footer footer footer footer';
+    }
+    .testimonials > .grid-container-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .service > .grid-container-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .ads {
+        display: grid;
+    }
     .navig {
         display: none;
     }
