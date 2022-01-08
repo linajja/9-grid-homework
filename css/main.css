@@ -16,10 +16,20 @@ main {
         'service'
         'freelance'
         'testimonials'
-        'content'
-        'footer';
+        'footer'
+        'navig';
     gap: 30px;
-    margin-top: 20px;
+}
+.content {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.container {
+    width: 100%;
+    border: 1px solid black;
+    line-height: 50px;
+    border-radius: 6px;
+    text-align: center;
 }
 .grid-container-column {
     display: grid;
@@ -27,35 +37,36 @@ main {
     gap: 10px;
     background-color: yellow;
 }
-.container {
-    border: 1px solid black;
-    line-height: 50px;
-    border-radius: 6px;
-    text-align: center;
-}
 .header {
-    position: sticky;
+    position: fixed;
+    top: 0;
+    grid-area: header;
     background-color: red;
 }
 .hero {
+    grid-area: hero;
     background-color: green;
 }
 .service {
+    grid-area: service;
     background-color: blueviolet;
 }
-.services {
-    background-color: pink;
-}
 .freelance {
+    grid-area: freelance;
     background-color: orange;
 }
 .testimonials {
+    grid-area: testimonials;
     background-color: brown;
 }
 .footer {
+    grid-area: footer;
     background-color: green;
 }
 .navig {
+    position: fixed;
+    bottom: 0;
+    grid-area: navig;
     background-color: red;
 }
 @media (min-width: 768px) {
@@ -76,25 +87,20 @@ main {
     }
 
     .navig {
-        display: none;
     }
 }
-@media (min-width: 1200px) {
-    .grid-container-column {
+@media (min-width: 962px) {
+    main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
         gap: 10px;
-    }
-
-    grid-template-areas {
         grid-template-areas:
-            'header navig . .'
-            'hero hero hero hero hero'
-            'service service service service'
-            'testimonials testimonials '
-            'freelance freelance freelance freelance freelance'
-            'ads'
-            'footer footer footer footer footer';
+            'header'
+            'hero'
+            'service'
+            'testimonials'
+            'freelance'
+            'footer';
     }
 
     .navig {
