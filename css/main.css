@@ -40,9 +40,25 @@ main {
 }
 .header {
     position: fixed;
+    display: grid;
     top: 0;
     grid-area: header;
     background-color: red;
+    grid-template-areas:  
+        'logo'
+        'icon';
+}
+.header > .logo {
+    height: 40px;
+    grid-area: logo;
+}
+.header > .icon {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    display: none;
+    grid-area: icon;
+
 }
 .hero {
     grid-area: hero;
@@ -102,7 +118,13 @@ main {
     }
     .header {
         position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:  
+        '. . icon';
     }
+    .header > .icon {
+    display: grid;
 }
 @media (min-width: 920px) {
     main {
@@ -137,7 +159,8 @@ main {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         gap: 10px;
         grid-template-areas:
-        ' . . navig . .'
+        ' . . . . icon'
+        
         position: relative;
     }
 }
