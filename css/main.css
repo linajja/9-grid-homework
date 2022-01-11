@@ -1,7 +1,7 @@
 body,
 body * {
     margin: 0;
-    padding: 0;
+    padding: 10px 10px;
     vertical-align: top;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
@@ -30,12 +30,14 @@ main {
     line-height: 50px;
     border-radius: 6px;
     text-align: center;
+    
 }
 .grid-container-column {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 20px;
-    background-color: yellow;
+    gap: 20px;
+    padding: 20px 10px;
+    justify-content: center;
     align-content: center;
 }
 .header {
@@ -49,12 +51,14 @@ main {
         'navheader'
         'icon';
     background-color: white;
+    width: 100%;
+    text-align: center;
 }
 .logo {
     display: inline-block;
     margin-top: 5px;
     margin-left: 5px;
-    height: 40px;
+    height: 80px;
     grid-area: img;
     opacity: 0;
 }
@@ -72,34 +76,30 @@ icon {
 }
 .hero {
     grid-area: hero;
-    background-color: green;
 }
 .ads {
     grid-area: ads;
-    background-color: brown;
     display: none;
 }
 .service {
     grid-area: service;
-    background-color: blueviolet;
 }
 .freelance {
     grid-area: freelance;
-    background-color: orange;
 }
 .testimonials {
     grid-area: testimonials;
-    background-color: brown;
 }
 .footer {
     grid-area: footer;
-    background-color: green;
 }
 navig {
     position: fixed;
     bottom: 0;
     grid-area: navig;
     background-color: white;
+    width: 100%;
+    text-align: center;
 }
 a {
     display: inline-block;
@@ -127,14 +127,14 @@ navheader {
             'footer'
             'navig';
     }
-    .grid-container-column {
-        display: grid;
+    .testimonials > .grid-container-column {
         grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
     .service > .grid-container-column {
         display: grid;
-        grid-template-columns: 50px 1fr 1fr 50px;
-        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
     .content {
         margin-top: 10px;
@@ -173,10 +173,12 @@ navheader {
     .testimonials > .grid-container-column {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
     .service > .grid-container-column {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
     }
     .content {
         margin-top: 10px;
